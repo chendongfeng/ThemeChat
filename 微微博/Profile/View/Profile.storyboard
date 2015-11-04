@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="UAj-5W-QLM">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Base Nav Controller-->
+        <scene sceneID="2L0-bs-KHC">
+            <objects>
+                <navigationController id="UAj-5W-QLM" customClass="BaseNavController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1p8-JS-Rrt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="uGm-Ok-ACx" kind="relationship" relationship="rootViewController" id="xad-u8-woc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2F0-8U-Jbb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-378.66666666666669" y="512.14666666666665"/>
+        </scene>
+        <!--个人-->
+        <scene sceneID="b61-JJ-TzB">
+            <objects>
+                <viewController id="uGm-Ok-ACx" customClass="ProfileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yec-Rc-SVo"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cf5-HM-BeX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7PR-0D-5lM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PNt-ow-I5Q">
+                                <rect key="frame" x="0.0" y="64" width="320" height="179.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DJv-MP-62y">
+                                        <rect key="frame" x="8" y="8" width="69" height="80"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="昵称" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PW5-rv-Liq">
+                                        <rect key="frame" x="92" y="8" width="179" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="简介：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THd-CP-hh1">
+                                        <rect key="frame" x="92" y="67" width="179" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SUh-1M-O12">
+                                        <rect key="frame" x="24" y="110" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.40741398358585856" green="0.40741398358585856" blue="0.40741398358585856" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="关注">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="attentionAction:" destination="uGm-Ok-ACx" eventType="touchUpInside" id="pe1-Ip-rPY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ta-BR-aTk">
+                                        <rect key="frame" x="98" y="110" width="50" height="49.5"/>
+                                        <color key="backgroundColor" red="0.40741398358585856" green="0.40741398358585856" blue="0.40741398358585856" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="粉丝">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="fansAction:" destination="uGm-Ok-ACx" eventType="touchUpInside" id="X0E-46-0HZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3B-RA-jdg">
+                                        <rect key="frame" x="172" y="110" width="50" height="49.5"/>
+                                        <color key="backgroundColor" red="0.40741398358585856" green="0.40741398358585856" blue="0.40741398358585856" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="资料">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfR-KN-lc4">
+                                        <rect key="frame" x="246" y="110" width="50" height="49.5"/>
+                                        <color key="backgroundColor" red="0.40741398358585856" green="0.40741398358585856" blue="0.40741398358585856" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="更多">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnt-Zp-6eQ">
+                                        <rect key="frame" x="35" y="118" width="28" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJt-1e-yYu">
+                                        <rect key="frame" x="109" y="118" width="28" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="男" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMs-h0-ONX">
+                                        <rect key="frame" x="92" y="37" width="179" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="PNt-ow-I5Q" secondAttribute="trailing" id="A2V-yX-PQN"/>
+                            <constraint firstItem="PNt-ow-I5Q" firstAttribute="top" secondItem="yec-Rc-SVo" secondAttribute="bottom" id="LzF-cM-jgn"/>
+                            <constraint firstItem="PNt-ow-I5Q" firstAttribute="leading" secondItem="7PR-0D-5lM" secondAttribute="leadingMargin" id="jLV-x8-xfk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="个人" id="l0x-fG-YNV"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="attentionNumberLabel" destination="nnt-Zp-6eQ" id="d3E-v6-siE"/>
+                        <outlet property="fansNumberLabel" destination="nJt-1e-yYu" id="Xke-Uv-49E"/>
+                        <outlet property="headImageView" destination="DJv-MP-62y" id="8pf-VI-mwc"/>
+                        <outlet property="informationLabel" destination="jMs-h0-ONX" id="WHY-ei-ubL"/>
+                        <outlet property="instroductionLabel" destination="THd-CP-hh1" id="oha-J7-FcZ"/>
+                        <outlet property="materialButton" destination="J3B-RA-jdg" id="6or-Aq-8U5"/>
+                        <outlet property="moreButton" destination="tfR-KN-lc4" id="T93-Gn-5aL"/>
+                        <outlet property="nickNameLabel" destination="PW5-rv-Liq" id="DnB-Xg-BAz"/>
+                        <outlet property="topView" destination="PNt-ow-I5Q" id="mSR-Ng-ftm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IyP-mC-82G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-31" y="523"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
